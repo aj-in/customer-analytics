@@ -22,7 +22,7 @@ I developed an AI clustering model in Python to catch issues *before* they gain 
 <br>
 <br>
 
-## What it does, in three minutes
+## What it does
 
 The dashboard does three things, in order:
 
