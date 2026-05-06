@@ -42,30 +42,41 @@ Top 5 complaints by volume, slowest issues to resolve, CSAT trendline, and a liv
 
 <br>
 
+<ol>
+<li>
 
 **Clusters were initially unreadable.** First pass auto-labeled groups *"Anniversary / Breakfast / Dinner"* — technically right, but are barely actionable to a manager.
 
 > **Fix:** each cluster centroid now cosine-matches against a curated label library e.g. `Slow Check-in`, `Hidden Fees`, `Construction Noise`. Dashboards now say things ops can act on.
 
-<img width="1924" height="940" alt="image" src="https://github.com/user-attachments/assets/b2a54864-9c46-4186-8beb-518a9c44ea40" />
+<img width="1305" height="836" alt="image" src="https://github.com/user-attachments/assets/df723cb6-25cf-4d8b-bcf2-fb03e9d38cfa" />
 
+
+</li>
 <br>
 <br>
 
 
-
-**Resolved tickets weren't refreshing the dashboard.** I was reloading from disk on every render, which meant slow, laggy metrics.
+<li>
+Resolved tickets weren't refreshing the dashboard. I was reloading from disk on every render, which meant slow, laggy metrics.
 
 > **Fix:** moved the data flow into `session_state` and committed to SQL database on the same call. Resolve a ticket → every metric updates instantly. *(real-time updates)*
 
-**Had to hide API keys** in admin panel and not push it to direct AWS Glue, preventing data leaks/lawsuits. In real-world I would look at AWS Secretes Manager to do that
-
+Architecture:
 
 <img width="1880" height="1030" alt="image" src="https://github.com/user-attachments/assets/a54e6fa7-654b-485c-a105-68e1f18cd5d8" />
 
+<br>
+(Had to hide API keys in admin panel and not push it to direct AWS Glue, preventing data leaks/lawsuits. In real-world I would look at AWS Secretes Manager to do that
+<br>
+Also hid the refresh buttons in the admin panel to prevent massive cloud bills if someone panic pressed "Refresh" Button, If they see data wasn't loading fast enough
+)
 
 <br>
 <br>
+
+</li>
+</ol>
 
 ## Why this works for any business
 
@@ -87,3 +98,7 @@ The pipeline treats the data source as a parameter. **No manual if-then rules.**
 The model currently struggles with truly mixed reviews — *"loved the product, hated the staff."* The **Uncategorizable** tab already flags these with a confidence score for ops to override in one click.
 
 > **Future Scope:** feed every partially negative review back into unresolved issues, to ensure no unresolved errors.
+
+
+<br>
+<br>
