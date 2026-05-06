@@ -30,7 +30,7 @@ The dashboard does three things, in order:
 Scheduled API refreshes via AWS Glue. No more weekly *export → download → switch site → repeat*. Hours of data-entry tax eliminated per branch, every week.
 
 **2. Groups complaints by meaning, not keywords.**
-A SQL query `WHERE review LIKE '%loud%'` returns **0 matches** against my dataset. The AI returns **twelve** — because *"jackhammer"*, *"thin walls"*, and *"doors slamming"* all describe the same problem.
+A SQL query `WHERE review LIKE '%loud%'` returns **0 matches** against my dataset. The AI returns **twelve** — because *"jackhammer"*, *"thin walls"*, and *"doors slamming"* all describe the same "loud rooms".
 
 **3. Surfaces what to act on.**
 Top 5 complaints by volume, slowest issues to resolve, CSAT trendline, and a live ops ticket queue with one-click resolve.
