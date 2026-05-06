@@ -1,12 +1,12 @@
-# customer-analytics
 
-*AI Vector Embedding to extract specific product issues from Google Reviews API*
 
 ## AI Customer Analytics
 
-> **Turning thousands of unread customer reviews into the next enterprise contract.**
-
+> **AI Vector Embedding to extract specific product issues from Google Reviews API.**
+ 
 **Live demo →** [arjun-kakade-customer-analytics.streamlit.app](https://arjun-kakade-customer-analytics.streamlit.app/)
+
+<img width="2424" height="1395" alt="image" src="https://github.com/user-attachments/assets/af996d27-3ec8-4b8c-89a2-a6375461ddc7" />
 
 
 <br>
@@ -40,15 +40,29 @@ Top 5 complaints by volume, slowest issues to resolve, CSAT trendline, and a liv
 
 ## Engineering challenges I had to think through
 
+<br>
+
+
 **Clusters were initially unreadable.** First pass auto-labeled groups *"Anniversary / Breakfast / Dinner"* — technically right, but are barely actionable to a manager.
 
 > **Fix:** each cluster centroid now cosine-matches against a curated label library e.g. `Slow Check-in`, `Hidden Fees`, `Construction Noise`. Dashboards now say things ops can act on.
+
+<img width="1924" height="940" alt="image" src="https://github.com/user-attachments/assets/b2a54864-9c46-4186-8beb-518a9c44ea40" />
+
+<br>
+<br>
+
+
 
 **Resolved tickets weren't refreshing the dashboard.** I was reloading from disk on every render, which meant slow, laggy metrics.
 
 > **Fix:** moved the data flow into `session_state` and committed to SQL database on the same call. Resolve a ticket → every metric updates instantly. *(real-time updates)*
 
 **Had to hide API keys** in admin panel and not push it to direct AWS Glue, preventing data leaks/lawsuits. In real-world I would look at AWS Secretes Manager to do that
+
+
+<img width="1880" height="1030" alt="image" src="https://github.com/user-attachments/assets/a54e6fa7-654b-485c-a105-68e1f18cd5d8" />
+
 
 <br>
 <br>
