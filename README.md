@@ -13,9 +13,9 @@
 
 ## Why this project exists
 
-Late responses to negative reviews erode trust. Ops teams can't read 200+ reviews across 4+ branches every week. Most go uncategorized, unanswered, unresolved.
+Late responses to negative reviews erode trust. Ops teams can't read 200+ reviews across 4+ branches every week. Most go uncategorized, unanswered & unresolved.
 
-> **We lose customers we'll never know we lost** — driven away by unresolved negative reviews.
+_**We lose customers we'll never know we lost** — driven away by unresolved negative reviews._
 
 I developed an AI clustering model in Python to catch issues *before* they gain negative traction, enabling Operations teams prioritize time-sensitive product issues.
 
@@ -33,7 +33,7 @@ Scheduled API refreshes via AWS Glue. No more weekly *export → download → sw
 A SQL query `WHERE review LIKE '%loud%'` returns **0 matches** against my dataset. The AI returns **twelve** — because *"jackhammer"*, *"thin walls"*, and *"doors slamming"* all describe the same "loud rooms".
 
 **3. Surfaces what to act on.**
-Top 5 complaints by volume, slowest issues to resolve, CSAT trendline, and a live ops ticket queue with one-click resolve.
+Top 5 complaints by volume, slowest issues to resolve, CSAT (Customer Satisfaction) trendline, and a live operations ticket queue.
 
 <br>
 <br>
