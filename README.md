@@ -86,7 +86,7 @@ The pipeline treats the data source as a parameter. **No manual if-then rules.**
 - **Support tickets** → operational pain points ranked by volume and impact
 - **Survey free-text or Glassdoor pages** → product or culture signal
 
-**Competitor analysis is the ultimate use case.** Feed in a competitor's public reviews. Sales walks into the next pitch with *"Here's what their customers complain about. Here's how we improved our products."*
+**Competitor analysis is the ultimate use case.** Feed in a competitor's public reviews. Sales walks into the next pitch with *"Here's what their customers complain about. Here's how we are a better alternative to our competitors."*
 
 <br>
 <br>
