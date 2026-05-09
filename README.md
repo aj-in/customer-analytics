@@ -97,7 +97,7 @@ The pipeline treats the data source as a parameter. **No manual if-then rules.**
 
 The model currently struggles with truly mixed reviews — *"loved the product, hated the staff."* The **Uncategorizable** tab already flags these with a confidence score for ops to override in one click.
 
-> **Future Scope:** feed every partially negative review back into unresolved issues, to ensure no unresolved errors.
+> **Future Scope:** feed every partially negative review back into unresolved issues, to ensure 0 unresolved errors.
 
 
 <br>
