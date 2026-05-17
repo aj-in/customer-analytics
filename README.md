@@ -45,14 +45,15 @@ Top 5 complaints by volume, slowest issues to resolve, CSAT (Customer Satisfacti
 <ol>
 
  <li>
- <br>
+ 
 "Bad Room" and "Excellent room" were grouped together as the same problem, just because they had the word "room" in common 
-> **Fix:** Sentiment-stratified clustering. Split reviews by rating into positive / negative / neutral pools **first**, then run KMeans inside each pool with the matching label vocabulary
+> **Fix:** Sentiment-stratified clustering. Split reviews by rating into positive / negative / neutral pools **first**, then run HDBSCAN inside each pool with the matching label vocabulary
 
 
-  
+
+  </li>
+ 
 <br>
- </li>
 <li>
 
 **Clusters were initially unreadable.** First pass auto-labeled groups *"Anniversary / Breakfast / Dinner"* — technically right, but are barely actionable to a manager.
