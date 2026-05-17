@@ -86,7 +86,23 @@ Also hid the refresh buttons in the admin panel to prevent massive cloud bills i
 <br>
 <br>
 
+
 </li>
+
+
+
+<li>
+
+**K-Means Model Limitations.** While initially chosen for simplicity, they need the total number of clusters (K) beforehand. Meaning I had to predict the totla number of compltnt types (100% impossible task).
+
+> **Fix:** used HDBSCAN, which can also deal with outliers as well & won't need hardcoded complaint types.
+
+
+
+</li>
+<br>
+<br>
+
 </ol>
 
 ## Why this works for any business
